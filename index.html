@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salman Store - Solusi Digital Terpercaya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ SALMAN STORE ⚡</h1>
+            <p>Solusi Digital Terpercaya untuk Kebutuhan Bot & Panel</p>
+        </div>
+
+        <div class="contact-info">
+            <h3>📞 Hubungi Kami</h3>
+            <div class="contact-links">
+                <a href="https://wa.me/6285133061046" target="_blank">📱 WhatsApp</a>
+                <a href="https://chat.whatsapp.com/C8qs70cT1KhBe6F9xvwDPs" target="_blank">👥 Grup Bot</a>
+                <a href="https://whatsapp.com/channel/0029Vb6Ovsc1t90UIaJyge3f" target="_blank">⭐ Testimoni</a>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <h3>📌 PANEL RUN BOT</h3>
+                <ul class="price-list">
+                    <li>🔐 RAM 1GB CPU 10% - Rp 1.000</li>
+                    <li>🔐 RAM 2GB CPU 20% - Rp 2.000</li>
+                    <li>🔐 RAM 3GB CPU 30% - Rp 3.000</li>
+                    <li>🔐 RAM 4GB CPU 40% - Rp 4.000</li>
+                    <li>🔐 RAM 5GB CPU 50% - Rp 5.000</li>
+                    <li>🔐 RAM 6GB CPU 60% - Rp 6.000</li>
+                    <li>🔐 RAM 7GB CPU 70% - Rp 7.000</li>
+                    <li>🔐 RAM 8GB CPU 80% - Rp 8.000</li>
+                    <li>🔐 RAM 9GB CPU 90% - Rp 9.000</li>
+                    <li>🔐 RAM 10GB CPU 100% - Rp 10.000</li>
+                    <li>🔐 RAM UNLI CPU UNLI - Rp 11.000-15.000</li>
+                </ul>
+                <div class="benefits">
+                    <strong>🎁 BONUS!</strong>
+                    <ul>
+                        <li>✔ GRATIS SC pembelian di atas 5GB</li>
+                        <li>✔ GRATIS pasang SC jika tidak bisa</li>
+                    </ul>
+                </div>
+                <button class="order-btn" onclick="openOrderModal('Panel Run Bot')">Pesan Sekarang</button>
+            </div>
+
+            <div class="product-card">
+                <h3>🤖 BOT PUSH KONTAK</h3>
+                <ul class="price-list">
+                    <li>📅 5K / Minggu</li>
+                    <li>📅 10K / Bulan</li>
+                </ul>
+                <div class="benefits">
+                    <strong>Keuntungan:</strong>
+                    <ul>
+                        <li>✔ Server terjaga</li>
+                        <li>✔ Kualitas terjamin</li>
+                        <li>✔ SC aman</li>
+                        <li>✔ Hemat kuota & penyimpanan</li>
+                        <li>✔ Web close? Bot tetap ON!</li>
+                    </ul>
+                </div>
+                <button class="order-btn" onclick="openOrderModal('Bot Push Kontak')">Pesan Sekarang</button>
+            </div>
+
+            <div class="product-card">
+                <h3>📲 SEWA BOT WA</h3>
+                <p style="margin-bottom: 15px;">Pakai nomor admin, tanpa ribet!</p>
+                <ul class="price-list">
+                    <li>🔹 2K / Hari</li>
+                    <li>🔹 7K / Minggu</li>
+                    <li>🔹 15K / Bulan (Paling Hemat!)</li>
+                </ul>
+                <div class="benefits">
+                    <strong>💡 Kenapa harga segitu?</strong>
+                    <ul>
+                        <li>Harian cocok buat uji coba</li>
+                        <li>Mingguan lebih hemat</li>
+                        <li>Bulanan paling worth it (500/hari)</li>
+                    </ul>
+                </div>
+                <button class="order-btn" onclick="openOrderModal('Sewa Bot WA')">Pesan Sekarang</button>
+            </div>
+
+            <div class="product-card">
+                <h3>💼 RESELLER PANEL</h3>
+                <ul class="price-list">
+                    <li>💰 10K / Bulan</li>
+                </ul>
+                <div class="benefits">
+                    <strong>Keuntungan Reseller:</strong>
+                    <ul>
+                        <li>✔ Bisa jualan panel</li>
+                        <li>✔ Bisa buat panel sepuasnya</li>
+                        <li>✔ Bisa jualan bot</li>
+                    </ul>
+                </div>
+                <button class="order-btn" onclick="openOrderModal('Reseller Panel')">Pesan Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Order -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 style="color: #667eea; margin-bottom: 20px;">Form Pemesanan</h2>
+            
+            <form id="orderForm">
+                <div class="form-group">
+                    <label>Produk yang dipilih:</label>
+                    <input type="text" id="productName" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Lengkap:</label>
+                    <input type="text" id="customerName" required placeholder="Masukkan nama Anda">
+                </div>
+
+                <div class="form-group">
+                    <label>Nomor WhatsApp:</label>
+                    <input type="tel" id="customerWA" required placeholder="08xxxxxxxxxx">
+                </div>
+
+                <div class="form-group">
+                    <label>Pilih Paket:</label>
+                    <select id="packageSelect" required>
+                        <option value="">-- Pilih Paket --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Catatan (Opsional):</label>
+                    <textarea id="orderNote" rows="3" placeholder="Tambahkan catatan jika ada"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Proses Pembayaran</button>
+            </form>
+
+            <!-- Payment Section -->
+            <div id="paymentSection" class="payment-section">
+                <h3 style="color: #667eea;">💳 Informasi Pembayaran</h3>
+                
+                <div class="timer">
+                    ⏰ Waktu tersisa: <span id="countdown">05:00</span>
+                </div>
+
+                <div class="order-summary">
+                    <h4>📋 Ringkasan Pesanan</h4>
+                    <p><strong>Nama:</strong> <span id="summaryName"></span></p>
+                    <p><strong>Produk:</strong> <span id="summaryProduct"></span></p>
+                    <p><strong>Paket:</strong> <span id="summaryPackage"></span></p>
+                    <p><strong>Total:</strong> <span id="summaryPrice" style="color: #667eea; font-size: 1.2em;"></span></p>
+                </div>
+
+                <div class="dana-number">
+                    <h3>💰 Transfer ke DANA:</h3>
+                    <p id="danaNumber">085693404164</p>
+                    <button class="copy-btn" onclick="copyDanaNumber()">📋 Salin Nomor</button>
+                </div>
+
+                <div class="warning">
+                    <strong>⚠️ PENTING!</strong>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li>Transfer sesuai nominal yang tertera</li>
+                        <li>Selesaikan pembayaran dalam 5 menit</li>
+                        <li>Kirim bukti transfer ke WhatsApp admin</li>
+                        <li>Pesanan otomatis dibatalkan jika waktu habis</li>
+                    </ul>
+                </div>
+
+                <button class="order-btn" style="margin-top: 20px;" onclick="confirmPayment()">
+                    ✅ Konfirmasi Pembayaran
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
